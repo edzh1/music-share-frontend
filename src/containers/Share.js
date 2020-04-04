@@ -1,6 +1,6 @@
 import React from 'react';
 import Search from '../components/Search';
-import SearchResults from '../components/SearchResults';
+import SearchResult from '../components/SearchResult';
 import Meta from '../components/Meta';
 
 function ShareContainer() {
@@ -11,7 +11,11 @@ function ShareContainer() {
           Search
         </h4>
         <Search />
-        <SearchResults />
+        <ul>
+          {['result 1'].map(result =>
+            <SearchResult />
+          )}
+        </ul>
       </div>
       <div>
         <Meta />
