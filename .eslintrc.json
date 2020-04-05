@@ -1,0 +1,23 @@
+{
+  "parserOptions": {
+      "ecmaVersion": 11,
+      "sourceType": "module",
+      "ecmaFeatures": {
+          "jsx": true
+      }
+  },
+  "extends": [
+    "plugin:react/recommended",
+    "prettier/react",
+    "prettier"
+  ],
+  "plugins": ["prettier"],
+  "env": {
+    "browser": true,
+    "es2020": true
+  },
+  "rules": {
+    "prettier/prettier": "error",
+    "max-len": ["error", {"code": 120, "ignoreUrls": true}]
+  }
+}
