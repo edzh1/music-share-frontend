@@ -2,7 +2,7 @@ import React from 'react';
 
 function SearchResult() {
   return (
-    <li>result 1</li>
+    <li>search result 1</li>
   );
 }
 

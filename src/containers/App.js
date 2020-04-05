@@ -5,14 +5,14 @@ import ShareContainer from './Share';
 
 function App() {
   return (
-    <div>
-      <Sidebar>
-        <SidebarLink>Share</SidebarLink>
-      </Sidebar>
       <div>
-        <ShareContainer />
+        <Sidebar>
+          <SidebarLink>Share</SidebarLink>
+        </Sidebar>
+        <div>
+          <ShareContainer />
+        </div>
       </div>
-    </div>
   );
 }
 

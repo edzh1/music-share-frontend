@@ -12,8 +12,8 @@ function ShareContainer() {
         </h4>
         <Search />
         <ul>
-          {['result 1'].map(result =>
-            <SearchResult />
+          {['search result 1'].map(result =>
+            <SearchResult key={result} />
           )}
         </ul>
       </div>
