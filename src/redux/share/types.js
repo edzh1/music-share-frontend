@@ -1,3 +1,3 @@
-export const ADD_SEARCH_RESULT = "search/ADD_SEARCH_RESULT";
 export const SEARCH = "search/SEARCH";
-export const SHARE_DONE = "search/SHARE_DONE";
+export const SEARCH_SUCCESS = "search/SEARCH_SUCCESS";
+export const SEARCH_FAILURE = "search/SEARCH_FAILURE";

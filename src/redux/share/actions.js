@@ -1,5 +1,5 @@
-import { ADD_SEARCH_RESULT } from "./types";
+import { SEARCH } from "./types";
 
-export function addSearchResult(text) {
-  return { type: ADD_SEARCH_RESULT, text };
+export function search(query) {
+  return { type: SEARCH, payload: query };
 }

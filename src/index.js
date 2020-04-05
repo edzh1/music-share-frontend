@@ -8,24 +8,13 @@ import { Provider } from "react-redux";
 
 const store = configureStore();
 
-const render = (Component) => {
-  ReactDOM.render(
-    <React.StrictMode>
-      <Provider store={store}>
-        <App />
-      </Provider>
-    </React.StrictMode>,
-    document.getElementById("root")
-  );
-};
-
-render(App);
-
-if (module.hot) {
-  module.hot.accept("./containers/App", () => {
-    const NextApp = require("./containers/App").default;
-    render(NextApp);
-  });
-}
+ReactDOM.render(
+  <React.StrictMode>
+    <Provider store={store}>
+      <App />
+    </Provider>
+  </React.StrictMode>,
+  document.getElementById("root")
+);
 
 serviceWorker.unregister();

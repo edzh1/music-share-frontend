@@ -1,15 +1,18 @@
-import { put, takeEvery } from "redux-saga/effects";
-import { SEARCH, SHARE_DONE } from "./types";
+import { put, takeLatest, call } from "redux-saga/effects";
+import { SEARCH, SEARCH_SUCCESS, SEARCH_FAILURE } from "./types";
+import { searchAPI } from "./api";
 
-const delay = (ms) => new Promise((res) => setTimeout(res, ms));
-
-function* shareAsync() {
-  yield delay(1000);
-  yield put({ type: SHARE_DONE });
+function* search(action) {
+  try {
+    const result = yield call(searchAPI, action.payload);
+    yield put({ type: SEARCH_SUCCESS, payload: result });
+  } catch (error) {
+    yield put({ type: SEARCH_FAILURE });
+  }
 }
 
-function* watchShareAsync() {
-  yield takeEvery(SEARCH, shareAsync);
+function* watchSearch() {
+  yield takeLatest(SEARCH, search);
 }
 
-export { watchShareAsync };
+export { watchSearch };

@@ -7,14 +7,18 @@
       }
   },
   "extends": [
+    "eslint:recommended",
     "plugin:react/recommended",
+    "plugin:react-hooks/recommended",
     "prettier/react",
     "prettier"
   ],
   "plugins": ["prettier"],
   "env": {
     "browser": true,
-    "es2020": true
+    "node": true,
+    "es2020": true,
+    "jest": true
   },
   "rules": {
     "prettier/prettier": "error",
