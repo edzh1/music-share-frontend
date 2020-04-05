@@ -1,8 +1,14 @@
 import React from "react";
 import PropTypes from "prop-types";
+import styled from "@emotion/styled";
+
+const SidebarUI = styled.div`
+  width: 300px;
+  background-color: rgb(18, 18, 18);
+`;
 
 function Sidebar({ children }) {
-  return <div>{children}</div>;
+  return <SidebarUI>{children}</SidebarUI>;
 }
 
 export default Sidebar;

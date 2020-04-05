@@ -1,4 +1,4 @@
-import React, { useCallback } from "react";
+import React, { useCallback, Fragment } from "react";
 import Search from "../components/Search";
 import SearchResult from "../components/SearchResult";
 import Meta from "../components/Meta";
@@ -16,9 +16,8 @@ function ShareContainer() {
   ]);
 
   return (
-    <div>
+    <Fragment>
       <div>
-        <h4>Search</h4>
         <Search onSearch={search} />
         {searchLoading && <p>Loading...</p>}
         {hasSearchResult && (
@@ -36,7 +35,7 @@ function ShareContainer() {
       <div>
         <Meta />
       </div>
-    </div>
+    </Fragment>
   );
 }
 
